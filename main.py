@@ -166,7 +166,7 @@ class ForwardBot:
             await self.initialize()
 
             # 启动 Telethon 客户端
-            await self.client.start(phone=self.config.PHONE_NUMBER)
+            await self.client.start()   # 不再传入 phone 参数
 
             # 启动清理任务
             await self.message_handler.start_cleanup_task()
